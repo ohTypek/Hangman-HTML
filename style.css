@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  --black: #000;
+  --grey: #222;
+  --white: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inria Sans', sans-serif;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+main {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 450px 450px;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+header {
+  /* height: 100px; */
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#password {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+#letters-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  /* justify-content: space-around; */
+}
+
+.letters {
+  /* user-select: none; */
+  cursor: default;
+  font-size: 30px;
+  text-align: center;
+  border: solid 2px var(--grey);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.letters:hover, .letters:active {
+  border-color: var(--white);
+}
+
+@media screen and (max-width: 800px) {
+    main {
+      width: 100%;
+      padding: 10px;
+      grid-template-columns: 90%;
+    }
+    header {
+      grid-column: 1 / 2;
+    }
+    img {
+      width: 100%;
+    }
+}
